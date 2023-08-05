@@ -25,11 +25,11 @@ public class HelloController {
         return "hello-template";
     }
 
-    @GetMapping("hello-string")
-    @RequestBody
-    public String helloString(@RequestParam("name") String name){
-        return "hello" + name;
-    }
+//    @GetMapping("hello-string")
+//    @RequestBody
+//    public String helloString(@RequestParam("name") String name){
+//        return "hello" + name;
+//    }
 
-    
+
 }
