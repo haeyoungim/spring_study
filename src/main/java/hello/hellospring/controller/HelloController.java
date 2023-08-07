@@ -13,7 +13,7 @@ public class HelloController {
 
     @GetMapping("hello")
     public String hello(Model model) {
-        model.addAttribute("data","hello!!");
+        model.addAttribute("data", "hello!!");
         //data를 hello라고 넘길것이다 key,value
         //spring model을 하나 만들어서 넣어준다
         //key:data / value:hello!
@@ -22,20 +22,25 @@ public class HelloController {
     }
 
     @GetMapping("hello-mvc")
-    public String helloMvc(@RequestParam("name") String name, Model model){
-        model.addAttribute("name",name);
+    public String helloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
         return "hello-template";
     }
 
     @GetMapping("hello-string")
-    @RequestBody
-    public String helloString(@RequestParam("name") String name){
+    @ResponseBody
+    public String helloString(@RequestParam("name") String name) {
         return "hello" + name;
     }
 
     @GetMapping("hello-api")
     @ResponseBody
-    public Hello
+    public Hello helloApi(@RequestParam("name") String name){
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello;
+    }
+
 
     static class Hello {
         private String name;
@@ -44,7 +49,7 @@ public class HelloController {
             return name;
         }
 
-        public void setName(String name){
+        public void setName(String name) {
             this.name = name;
         }
     }
