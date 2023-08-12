@@ -25,11 +25,11 @@ public class HelloController {
         //hello.html을 찾아서 렌더링 해라
     }
 
-//    @GetMapping("hello-mvc")
-//    public String helloMvc(@RequestParam("name") String name, Model model) {
-//        model.addAttribute("name", name);
-//        return "hello-template";
-//    }
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello-template";
+    }
 
     @GetMapping("hello-string")
     @ResponseBody
