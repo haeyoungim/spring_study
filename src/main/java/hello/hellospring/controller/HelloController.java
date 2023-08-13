@@ -53,7 +53,8 @@ public class HelloController {
 
 
     static class Hello {
-        //helloContollre.hello
+        //객체 선언
+        //helloContoller.hello
         //컨트롤+엔터 = 자동완성
 
         //자바빈 규약 / 자바빈표준 방식
