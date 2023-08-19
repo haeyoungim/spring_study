@@ -3,6 +3,7 @@ package hello.hellospring;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,6 +18,7 @@ public class SpringConfig {
     memberservice는 memberrepository를 사용하기 때문에 memberservice에서 repository 호출
     controller는 스프링이 관리하기 때문에 autowired로 등록
 */
+
 
     @Bean
     public MemberService memberService() {
