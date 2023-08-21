@@ -6,4 +6,4 @@ create table member
     primary key (id)
 );
 
-insert into member(name) values('spring')
+-- insert into member(name) values('spring')
