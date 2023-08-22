@@ -16,7 +16,8 @@ class MemberServiceTest {
     MemberService memberService;
     MemoryMemberRepository memberRepository;
 
-    //같은 repository 함사용
+    //같은 repository 사용함
+    //메모리에 있는 데이터를 지우기 위해 사용
     @BeforeEach
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
