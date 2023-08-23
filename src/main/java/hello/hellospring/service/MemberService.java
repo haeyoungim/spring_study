@@ -2,12 +2,14 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Transactional
+//데이터를 저장하고 변경하려면 꼭 필요
 public class MemberService {
     
     private final MemberRepository memberRepository;
@@ -32,7 +34,7 @@ public class MemberService {
     
      */
     public Long join(Member member) {
-
+        //jpa는 join들어올때 모든 데이터 변경이 tranjaction 안에서 실행되어야함
         validateDuplicateMember(member); //중복 회원 검증
         memberRepository.save(member);
         return member.getId();
