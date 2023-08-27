@@ -35,10 +35,11 @@ public class MemberService {
      */
     public Long join(Member member) {
         //jpa는 join들어올때 모든 데이터 변경이 tranjaction 안에서 실행되어야함
-        validateDuplicateMember(member); //중복 회원 검증
-        memberRepository.save(member);
-        return member.getId();
-        
+
+            validateDuplicateMember(member); //중복 회원 검증
+            memberRepository.save(member);
+            return member.getId();
+
     }
 
     //커맨드+옵션+M
@@ -55,7 +56,9 @@ public class MemberService {
      */
 
     public List<Member> findMembers() {
-        return memberRepository.findAll();
+
+            return memberRepository.findAll();
+
     }
 
     public Optional<Member> findOne(Long memberId){
