@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
+    //정적
     @GetMapping("hello")
     public String hello(Model model) {
         model.addAttribute("data", "hello!!");
