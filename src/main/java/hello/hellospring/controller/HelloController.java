@@ -23,7 +23,7 @@ public class HelloController {
         //spring model을 하나 만들어서 넣어준다
         //key:data / value:hello!
         return "hello";
-        //hello.html을 찾아서 렌더링 해라
+        //hello.html을 찾아서 렌더링 함
     }
 
     @GetMapping("hello-mvc")

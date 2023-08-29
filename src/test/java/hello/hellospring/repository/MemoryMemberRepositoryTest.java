@@ -12,6 +12,7 @@ import java.util.List;
 //테스트 클래스 작성 -> repository 작성
 //순서를 뒤집는것을 TDD 라고 함
 //테스트틀을 먼저 만들고 운영 클래스를 만드는것
+//테스트 코드 작성 중요
 public class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
